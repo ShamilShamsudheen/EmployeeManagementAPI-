@@ -21,7 +21,7 @@ namespace EmployeManagementAPI.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(int username, string password)
         {
-            var checkEmployee = _employeeData.GetEmpByID(username ,password);
+            var checkEmployee = _employeeData.GetEmpByID(username,password);
             if(checkEmployee != null)
             {
                 var claims = new List<Claim>
